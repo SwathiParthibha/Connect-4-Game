@@ -328,755 +328,848 @@ namespace Connect4 {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->Black16))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^  >(this->Black06))->BeginInit();
 			this->SuspendLayout();
-
-
+			// 
 			// button7
+			// 
 			this->button7->Location = System::Drawing::Point(705, 74);
 			this->button7->Name = L"button7";
 			this->button7->Size = System::Drawing::Size(26, 23);
 			this->button7->TabIndex = 1;
 			this->button7->UseVisualStyleBackColor = true;
 			this->button7->Click += gcnew System::EventHandler(this, &MyForm::button7_Click);
-
-			// boardBox 
+			// 
+			// boardBox
+			// 
 			this->boardBox->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"boardBox.BackgroundImage")));
 			this->boardBox->Location = System::Drawing::Point(126, 103);
 			this->boardBox->Name = L"boardBox";
 			this->boardBox->Size = System::Drawing::Size(639, 485);
 			this->boardBox->TabIndex = 2;
 			this->boardBox->TabStop = false;
-
+			// 
 			// richTextBox1
-			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"Bookman Old Style", 21.75F, System::Drawing::FontStyle::Regular, System::Drawing::GraphicsUnit::Point, 
+			// 
+			this->richTextBox1->BackColor = System::Drawing::Color::Silver;
+			this->richTextBox1->Font = (gcnew System::Drawing::Font(L"Bookman Old Style", 21.75F, System::Drawing::FontStyle::Bold, System::Drawing::GraphicsUnit::Point, 
 				static_cast<System::Byte>(0)));
 			this->richTextBox1->Location = System::Drawing::Point(350, 12);
 			this->richTextBox1->Name = L"richTextBox1";
 			this->richTextBox1->Size = System::Drawing::Size(201, 50);
 			this->richTextBox1->TabIndex = 3;
 			this->richTextBox1->Text = L"Red\'s Turn";
-
+			// 
 			// button6
+			// 
 			this->button6->Location = System::Drawing::Point(612, 74);
 			this->button6->Name = L"button6";
 			this->button6->Size = System::Drawing::Size(26, 23);
 			this->button6->TabIndex = 4;
 			this->button6->UseVisualStyleBackColor = true;
 			this->button6->Click += gcnew System::EventHandler(this, &MyForm::button6_Click);
-
+			// 
 			// button5
+			// 
 			this->button5->Location = System::Drawing::Point(525, 74);
 			this->button5->Name = L"button5";
 			this->button5->Size = System::Drawing::Size(26, 23);
 			this->button5->TabIndex = 5;
 			this->button5->UseVisualStyleBackColor = true;
 			this->button5->Click += gcnew System::EventHandler(this, &MyForm::button5_Click);
-
+			// 
 			// button4
+			// 
 			this->button4->Location = System::Drawing::Point(435, 74);
 			this->button4->Name = L"button4";
 			this->button4->Size = System::Drawing::Size(26, 23);
 			this->button4->TabIndex = 6;
 			this->button4->UseVisualStyleBackColor = true;
 			this->button4->Click += gcnew System::EventHandler(this, &MyForm::button4_Click);
- 
+			// 
 			// button3
+			// 
 			this->button3->Location = System::Drawing::Point(341, 74);
 			this->button3->Name = L"button3";
 			this->button3->Size = System::Drawing::Size(26, 23);
 			this->button3->TabIndex = 7;
 			this->button3->UseVisualStyleBackColor = true;
 			this->button3->Click += gcnew System::EventHandler(this, &MyForm::button3_Click);
-
+			// 
 			// button2
+			// 
 			this->button2->Location = System::Drawing::Point(251, 74);
 			this->button2->Name = L"button2";
 			this->button2->Size = System::Drawing::Size(26, 23);
 			this->button2->TabIndex = 8;
 			this->button2->UseVisualStyleBackColor = true;
 			this->button2->Click += gcnew System::EventHandler(this, &MyForm::button2_Click);
-
+			// 
 			// button1
+			// 
 			this->button1->Location = System::Drawing::Point(160, 74);
 			this->button1->Name = L"button1";
 			this->button1->Size = System::Drawing::Size(26, 23);
 			this->button1->TabIndex = 9;
 			this->button1->UseVisualStyleBackColor = true;
 			this->button1->Click += gcnew System::EventHandler(this, &MyForm::button1_Click);
-
+			// 
 			// Red50
+			// 
 			this->Red50->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red50.BackgroundImage")));
 			this->Red50->Location = System::Drawing::Point(126, 500);
 			this->Red50->Name = L"Red50";
 			this->Red50->Size = System::Drawing::Size(100, 88);
 			this->Red50->TabIndex = 10;
 			this->Red50->TabStop = false;
-
+			// 
 			// Red40
+			// 
 			this->Red40->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red40.BackgroundImage")));
 			this->Red40->Location = System::Drawing::Point(126, 419);
 			this->Red40->Name = L"Red40";
 			this->Red40->Size = System::Drawing::Size(100, 88);
 			this->Red40->TabIndex = 11;
 			this->Red40->TabStop = false;
-
+			// 
 			// Red30
+			// 
 			this->Red30->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red30.BackgroundImage")));
 			this->Red30->Location = System::Drawing::Point(126, 339);
 			this->Red30->Name = L"Red30";
 			this->Red30->Size = System::Drawing::Size(100, 88);
 			this->Red30->TabIndex = 12;
 			this->Red30->TabStop = false;
-
+			// 
 			// Red20
+			// 
 			this->Red20->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red20.BackgroundImage")));
 			this->Red20->Location = System::Drawing::Point(126, 258);
 			this->Red20->Name = L"Red20";
 			this->Red20->Size = System::Drawing::Size(100, 88);
 			this->Red20->TabIndex = 13;
 			this->Red20->TabStop = false;
-
+			// 
 			// Red10
+			// 
 			this->Red10->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red10.BackgroundImage")));
 			this->Red10->Location = System::Drawing::Point(126, 178);
 			this->Red10->Name = L"Red10";
 			this->Red10->Size = System::Drawing::Size(100, 88);
 			this->Red10->TabIndex = 14;
 			this->Red10->TabStop = false;
-
+			// 
 			// Red00
+			// 
 			this->Red00->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red00.BackgroundImage")));
 			this->Red00->Location = System::Drawing::Point(126, 103);
 			this->Red00->Name = L"Red00";
 			this->Red00->Size = System::Drawing::Size(100, 83);
 			this->Red00->TabIndex = 15;
 			this->Red00->TabStop = false;
-
+			// 
 			// Red51
+			// 
 			this->Red51->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red51.BackgroundImage")));
 			this->Red51->Location = System::Drawing::Point(215, 500);
 			this->Red51->Name = L"Red51";
 			this->Red51->Size = System::Drawing::Size(100, 88);
 			this->Red51->TabIndex = 16;
 			this->Red51->TabStop = false;
-
+			// 
 			// Red41
+			// 
 			this->Red41->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red41.BackgroundImage")));
 			this->Red41->Location = System::Drawing::Point(215, 419);
 			this->Red41->Name = L"Red41";
 			this->Red41->Size = System::Drawing::Size(100, 88);
 			this->Red41->TabIndex = 17;
 			this->Red41->TabStop = false;
-
+			// 
 			// Red31
+			// 
 			this->Red31->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red31.BackgroundImage")));
 			this->Red31->Location = System::Drawing::Point(215, 339);
 			this->Red31->Name = L"Red31";
 			this->Red31->Size = System::Drawing::Size(100, 88);
 			this->Red31->TabIndex = 18;
 			this->Red31->TabStop = false;
-
+			// 
 			// Red21
+			// 
 			this->Red21->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red21.BackgroundImage")));
 			this->Red21->Location = System::Drawing::Point(215, 258);
 			this->Red21->Name = L"Red21";
 			this->Red21->Size = System::Drawing::Size(100, 88);
 			this->Red21->TabIndex = 19;
 			this->Red21->TabStop = false;
-
+			// 
 			// Red11
+			// 
 			this->Red11->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red11.BackgroundImage")));
 			this->Red11->Location = System::Drawing::Point(215, 178);
 			this->Red11->Name = L"Red11";
 			this->Red11->Size = System::Drawing::Size(100, 88);
 			this->Red11->TabIndex = 20;
 			this->Red11->TabStop = false;
-
+			// 
 			// Red01
+			// 
 			this->Red01->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red01.BackgroundImage")));
 			this->Red01->Location = System::Drawing::Point(215, 103);
 			this->Red01->Name = L"Red01";
 			this->Red01->Size = System::Drawing::Size(100, 83);
 			this->Red01->TabIndex = 21;
 			this->Red01->TabStop = false;
-
+			// 
 			// Black40
+			// 
 			this->Black40->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black40.BackgroundImage")));
 			this->Black40->Location = System::Drawing::Point(126, 419);
 			this->Black40->Name = L"Black40";
 			this->Black40->Size = System::Drawing::Size(100, 88);
 			this->Black40->TabIndex = 22;
 			this->Black40->TabStop = false;
-
+			// 
 			// Black50
+			// 
 			this->Black50->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black50.BackgroundImage")));
 			this->Black50->Location = System::Drawing::Point(126, 500);
 			this->Black50->Name = L"Black50";
 			this->Black50->Size = System::Drawing::Size(100, 88);
 			this->Black50->TabIndex = 23;
 			this->Black50->TabStop = false;
-
+			// 
 			// Black30
+			// 
 			this->Black30->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black30.BackgroundImage")));
 			this->Black30->Location = System::Drawing::Point(126, 339);
 			this->Black30->Name = L"Black30";
 			this->Black30->Size = System::Drawing::Size(100, 88);
 			this->Black30->TabIndex = 24;
 			this->Black30->TabStop = false;
-
+			// 
 			// Black20
+			// 
 			this->Black20->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black20.BackgroundImage")));
 			this->Black20->Location = System::Drawing::Point(126, 258);
 			this->Black20->Name = L"Black20";
 			this->Black20->Size = System::Drawing::Size(100, 88);
 			this->Black20->TabIndex = 25;
 			this->Black20->TabStop = false;
-
+			// 
 			// Black10
+			// 
 			this->Black10->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black10.BackgroundImage")));
 			this->Black10->Location = System::Drawing::Point(126, 178);
 			this->Black10->Name = L"Black10";
 			this->Black10->Size = System::Drawing::Size(100, 88);
 			this->Black10->TabIndex = 26;
 			this->Black10->TabStop = false;
-
+			// 
 			// Black00
+			// 
 			this->Black00->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black00.BackgroundImage")));
 			this->Black00->Location = System::Drawing::Point(126, 103);
 			this->Black00->Name = L"Black00";
 			this->Black00->Size = System::Drawing::Size(100, 83);
 			this->Black00->TabIndex = 27;
 			this->Black00->TabStop = false;
-
+			// 
 			// Red52
+			// 
 			this->Red52->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red52.BackgroundImage")));
 			this->Red52->Location = System::Drawing::Point(309, 500);
 			this->Red52->Name = L"Red52";
 			this->Red52->Size = System::Drawing::Size(100, 88);
 			this->Red52->TabIndex = 28;
 			this->Red52->TabStop = false;
-
+			// 
 			// Red42
+			// 
 			this->Red42->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red42.BackgroundImage")));
 			this->Red42->Location = System::Drawing::Point(309, 419);
 			this->Red42->Name = L"Red42";
 			this->Red42->Size = System::Drawing::Size(100, 88);
 			this->Red42->TabIndex = 29;
 			this->Red42->TabStop = false;
-
+			// 
 			// Red32
+			// 
 			this->Red32->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red32.BackgroundImage")));
 			this->Red32->Location = System::Drawing::Point(309, 339);
 			this->Red32->Name = L"Red32";
 			this->Red32->Size = System::Drawing::Size(100, 88);
 			this->Red32->TabIndex = 30;
 			this->Red32->TabStop = false;
-
+			// 
 			// Red22
+			// 
 			this->Red22->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red22.BackgroundImage")));
 			this->Red22->Location = System::Drawing::Point(309, 258);
 			this->Red22->Name = L"Red22";
 			this->Red22->Size = System::Drawing::Size(100, 88);
 			this->Red22->TabIndex = 31;
 			this->Red22->TabStop = false;
-
+			// 
 			// Red12
+			// 
 			this->Red12->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red12.BackgroundImage")));
 			this->Red12->Location = System::Drawing::Point(309, 178);
 			this->Red12->Name = L"Red12";
 			this->Red12->Size = System::Drawing::Size(100, 88);
 			this->Red12->TabIndex = 32;
 			this->Red12->TabStop = false;
-
+			// 
 			// Red02
+			// 
 			this->Red02->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red02.BackgroundImage")));
 			this->Red02->Location = System::Drawing::Point(309, 103);
 			this->Red02->Name = L"Red02";
 			this->Red02->Size = System::Drawing::Size(100, 83);
 			this->Red02->TabIndex = 33;
 			this->Red02->TabStop = false;
-
+			// 
 			// Red53
+			// 
 			this->Red53->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red53.BackgroundImage")));
 			this->Red53->Location = System::Drawing::Point(398, 500);
 			this->Red53->Name = L"Red53";
 			this->Red53->Size = System::Drawing::Size(100, 88);
 			this->Red53->TabIndex = 34;
 			this->Red53->TabStop = false;
-
+			// 
 			// Red43
+			// 
 			this->Red43->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red43.BackgroundImage")));
 			this->Red43->Location = System::Drawing::Point(398, 419);
 			this->Red43->Name = L"Red43";
 			this->Red43->Size = System::Drawing::Size(100, 88);
 			this->Red43->TabIndex = 35;
 			this->Red43->TabStop = false;
-
+			// 
 			// Red33
+			// 
 			this->Red33->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red33.BackgroundImage")));
 			this->Red33->Location = System::Drawing::Point(398, 339);
 			this->Red33->Name = L"Red33";
 			this->Red33->Size = System::Drawing::Size(100, 88);
 			this->Red33->TabIndex = 36;
 			this->Red33->TabStop = false;
-
+			// 
 			// Red23
-
+			// 
 			this->Red23->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red23.BackgroundImage")));
 			this->Red23->Location = System::Drawing::Point(398, 258);
 			this->Red23->Name = L"Red23";
 			this->Red23->Size = System::Drawing::Size(100, 88);
 			this->Red23->TabIndex = 37;
 			this->Red23->TabStop = false;
-
+			// 
 			// Red13
+			// 
 			this->Red13->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red13.BackgroundImage")));
 			this->Red13->Location = System::Drawing::Point(398, 178);
 			this->Red13->Name = L"Red13";
 			this->Red13->Size = System::Drawing::Size(100, 88);
 			this->Red13->TabIndex = 38;
 			this->Red13->TabStop = false;
-
+			// 
 			// Red03
+			// 
 			this->Red03->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red03.BackgroundImage")));
 			this->Red03->Location = System::Drawing::Point(398, 103);
 			this->Red03->Name = L"Red03";
 			this->Red03->Size = System::Drawing::Size(100, 83);
 			this->Red03->TabIndex = 39;
 			this->Red03->TabStop = false;
-
+			// 
 			// Red54
+			// 
 			this->Red54->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red54.BackgroundImage")));
 			this->Red54->Location = System::Drawing::Point(491, 500);
 			this->Red54->Name = L"Red54";
 			this->Red54->Size = System::Drawing::Size(100, 88);
 			this->Red54->TabIndex = 40;
 			this->Red54->TabStop = false;
-
+			// 
 			// Red44
+			// 
 			this->Red44->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red44.BackgroundImage")));
 			this->Red44->Location = System::Drawing::Point(491, 419);
 			this->Red44->Name = L"Red44";
 			this->Red44->Size = System::Drawing::Size(100, 88);
 			this->Red44->TabIndex = 41;
 			this->Red44->TabStop = false;
-
+			// 
 			// Red34
+			// 
 			this->Red34->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red34.BackgroundImage")));
 			this->Red34->Location = System::Drawing::Point(491, 339);
 			this->Red34->Name = L"Red34";
 			this->Red34->Size = System::Drawing::Size(100, 88);
 			this->Red34->TabIndex = 42;
 			this->Red34->TabStop = false;
-
+			// 
 			// Red24
+			// 
 			this->Red24->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red24.BackgroundImage")));
 			this->Red24->Location = System::Drawing::Point(491, 258);
 			this->Red24->Name = L"Red24";
 			this->Red24->Size = System::Drawing::Size(100, 88);
 			this->Red24->TabIndex = 43;
 			this->Red24->TabStop = false;
-
+			// 
 			// Red14
+			// 
 			this->Red14->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red14.BackgroundImage")));
 			this->Red14->Location = System::Drawing::Point(491, 178);
 			this->Red14->Name = L"Red14";
 			this->Red14->Size = System::Drawing::Size(100, 88);
 			this->Red14->TabIndex = 44;
 			this->Red14->TabStop = false;
-
+			// 
 			// Red04
+			// 
 			this->Red04->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red04.BackgroundImage")));
 			this->Red04->Location = System::Drawing::Point(491, 103);
 			this->Red04->Name = L"Red04";
 			this->Red04->Size = System::Drawing::Size(100, 83);
 			this->Red04->TabIndex = 45;
 			this->Red04->TabStop = false;
-
+			// 
 			// Red55
+			// 
 			this->Red55->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red55.BackgroundImage")));
 			this->Red55->Location = System::Drawing::Point(579, 500);
 			this->Red55->Name = L"Red55";
 			this->Red55->Size = System::Drawing::Size(100, 88);
 			this->Red55->TabIndex = 46;
 			this->Red55->TabStop = false;
-
+			// 
 			// Red45
+			// 
 			this->Red45->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red45.BackgroundImage")));
 			this->Red45->Location = System::Drawing::Point(579, 419);
 			this->Red45->Name = L"Red45";
 			this->Red45->Size = System::Drawing::Size(100, 88);
 			this->Red45->TabIndex = 47;
 			this->Red45->TabStop = false;
-
+			// 
 			// Red35
+			// 
 			this->Red35->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red35.BackgroundImage")));
 			this->Red35->Location = System::Drawing::Point(579, 339);
 			this->Red35->Name = L"Red35";
 			this->Red35->Size = System::Drawing::Size(100, 88);
 			this->Red35->TabIndex = 48;
 			this->Red35->TabStop = false;
-
+			// 
 			// Red25
+			// 
 			this->Red25->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red25.BackgroundImage")));
 			this->Red25->Location = System::Drawing::Point(579, 258);
 			this->Red25->Name = L"Red25";
 			this->Red25->Size = System::Drawing::Size(100, 88);
 			this->Red25->TabIndex = 49;
 			this->Red25->TabStop = false;
-
+			// 
 			// Red15
+			// 
 			this->Red15->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red15.BackgroundImage")));
 			this->Red15->Location = System::Drawing::Point(579, 178);
 			this->Red15->Name = L"Red15";
 			this->Red15->Size = System::Drawing::Size(100, 88);
 			this->Red15->TabIndex = 50;
 			this->Red15->TabStop = false;
-
+			// 
 			// Red05
+			// 
 			this->Red05->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red05.BackgroundImage")));
 			this->Red05->Location = System::Drawing::Point(579, 103);
 			this->Red05->Name = L"Red05";
 			this->Red05->Size = System::Drawing::Size(100, 83);
 			this->Red05->TabIndex = 51;
 			this->Red05->TabStop = false;
-
+			// 
 			// Red56
+			// 
 			this->Red56->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red56.BackgroundImage")));
 			this->Red56->Location = System::Drawing::Point(665, 500);
 			this->Red56->Name = L"Red56";
 			this->Red56->Size = System::Drawing::Size(100, 88);
 			this->Red56->TabIndex = 52;
 			this->Red56->TabStop = false;
-
+			// 
 			// Red46
+			// 
 			this->Red46->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red46.BackgroundImage")));
 			this->Red46->Location = System::Drawing::Point(665, 419);
 			this->Red46->Name = L"Red46";
 			this->Red46->Size = System::Drawing::Size(100, 88);
 			this->Red46->TabIndex = 53;
 			this->Red46->TabStop = false;
-
+			// 
 			// Red36
+			// 
 			this->Red36->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red36.BackgroundImage")));
 			this->Red36->Location = System::Drawing::Point(665, 339);
 			this->Red36->Name = L"Red36";
 			this->Red36->Size = System::Drawing::Size(100, 88);
 			this->Red36->TabIndex = 54;
 			this->Red36->TabStop = false;
-
+			// 
 			// Red26
+			// 
 			this->Red26->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red26.BackgroundImage")));
 			this->Red26->Location = System::Drawing::Point(665, 258);
 			this->Red26->Name = L"Red26";
 			this->Red26->Size = System::Drawing::Size(100, 88);
 			this->Red26->TabIndex = 55;
 			this->Red26->TabStop = false;
-
+			// 
 			// Red16
+			// 
 			this->Red16->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red16.BackgroundImage")));
 			this->Red16->Location = System::Drawing::Point(665, 178);
 			this->Red16->Name = L"Red16";
 			this->Red16->Size = System::Drawing::Size(100, 88);
 			this->Red16->TabIndex = 56;
 			this->Red16->TabStop = false;
-	
+			// 
 			// Red06
+			// 
 			this->Red06->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Red06.BackgroundImage")));
 			this->Red06->Location = System::Drawing::Point(665, 103);
 			this->Red06->Name = L"Red06";
 			this->Red06->Size = System::Drawing::Size(100, 83);
 			this->Red06->TabIndex = 57;
 			this->Red06->TabStop = false;
-
+			// 
 			// Black51
+			// 
 			this->Black51->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black51.BackgroundImage")));
 			this->Black51->Location = System::Drawing::Point(215, 500);
 			this->Black51->Name = L"Black51";
 			this->Black51->Size = System::Drawing::Size(100, 88);
 			this->Black51->TabIndex = 58;
 			this->Black51->TabStop = false;
-
+			// 
 			// Black41
+			// 
 			this->Black41->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black41.BackgroundImage")));
 			this->Black41->Location = System::Drawing::Point(215, 419);
 			this->Black41->Name = L"Black41";
 			this->Black41->Size = System::Drawing::Size(100, 88);
 			this->Black41->TabIndex = 59;
 			this->Black41->TabStop = false;
-
+			// 
 			// Black31
+			// 
 			this->Black31->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black31.BackgroundImage")));
 			this->Black31->Location = System::Drawing::Point(215, 339);
 			this->Black31->Name = L"Black31";
 			this->Black31->Size = System::Drawing::Size(100, 88);
 			this->Black31->TabIndex = 60;
 			this->Black31->TabStop = false;
-
+			// 
 			// Black21
+			// 
 			this->Black21->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black21.BackgroundImage")));
 			this->Black21->Location = System::Drawing::Point(215, 258);
 			this->Black21->Name = L"Black21";
 			this->Black21->Size = System::Drawing::Size(100, 88);
 			this->Black21->TabIndex = 61;
 			this->Black21->TabStop = false;
-
+			// 
 			// Black11
+			// 
 			this->Black11->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black11.BackgroundImage")));
 			this->Black11->Location = System::Drawing::Point(215, 178);
 			this->Black11->Name = L"Black11";
 			this->Black11->Size = System::Drawing::Size(100, 88);
 			this->Black11->TabIndex = 62;
 			this->Black11->TabStop = false;
-
+			// 
 			// Black01
+			// 
 			this->Black01->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black01.BackgroundImage")));
 			this->Black01->Location = System::Drawing::Point(215, 103);
 			this->Black01->Name = L"Black01";
 			this->Black01->Size = System::Drawing::Size(100, 83);
 			this->Black01->TabIndex = 63;
 			this->Black01->TabStop = false;
-
+			// 
 			// Black52
+			// 
 			this->Black52->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black52.BackgroundImage")));
 			this->Black52->Location = System::Drawing::Point(309, 500);
 			this->Black52->Name = L"Black52";
 			this->Black52->Size = System::Drawing::Size(100, 88);
 			this->Black52->TabIndex = 64;
 			this->Black52->TabStop = false;
-
+			// 
 			// Black42
+			// 
 			this->Black42->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black42.BackgroundImage")));
 			this->Black42->Location = System::Drawing::Point(309, 419);
 			this->Black42->Name = L"Black42";
 			this->Black42->Size = System::Drawing::Size(100, 88);
 			this->Black42->TabIndex = 65;
 			this->Black42->TabStop = false;
-
+			// 
 			// Black32
+			// 
 			this->Black32->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black32.BackgroundImage")));
 			this->Black32->Location = System::Drawing::Point(309, 339);
 			this->Black32->Name = L"Black32";
 			this->Black32->Size = System::Drawing::Size(100, 88);
 			this->Black32->TabIndex = 66;
 			this->Black32->TabStop = false;
-
+			// 
 			// Black22
+			// 
 			this->Black22->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black22.BackgroundImage")));
 			this->Black22->Location = System::Drawing::Point(309, 258);
 			this->Black22->Name = L"Black22";
 			this->Black22->Size = System::Drawing::Size(100, 88);
 			this->Black22->TabIndex = 67;
 			this->Black22->TabStop = false;
-
+			// 
 			// Black12
+			// 
 			this->Black12->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black12.BackgroundImage")));
 			this->Black12->Location = System::Drawing::Point(309, 178);
 			this->Black12->Name = L"Black12";
 			this->Black12->Size = System::Drawing::Size(100, 88);
 			this->Black12->TabIndex = 68;
 			this->Black12->TabStop = false;
-
+			// 
 			// Black02
+			// 
 			this->Black02->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black02.BackgroundImage")));
 			this->Black02->Location = System::Drawing::Point(309, 103);
 			this->Black02->Name = L"Black02";
 			this->Black02->Size = System::Drawing::Size(100, 83);
 			this->Black02->TabIndex = 69;
 			this->Black02->TabStop = false;
-
+			// 
 			// Black53
+			// 
 			this->Black53->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black53.BackgroundImage")));
 			this->Black53->Location = System::Drawing::Point(398, 500);
 			this->Black53->Name = L"Black53";
 			this->Black53->Size = System::Drawing::Size(100, 88);
 			this->Black53->TabIndex = 70;
 			this->Black53->TabStop = false;
-
+			// 
 			// Black43
+			// 
 			this->Black43->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black43.BackgroundImage")));
 			this->Black43->Location = System::Drawing::Point(398, 419);
 			this->Black43->Name = L"Black43";
 			this->Black43->Size = System::Drawing::Size(100, 88);
 			this->Black43->TabIndex = 71;
 			this->Black43->TabStop = false;
-
+			// 
 			// Black33
+			// 
 			this->Black33->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black33.BackgroundImage")));
 			this->Black33->Location = System::Drawing::Point(398, 339);
 			this->Black33->Name = L"Black33";
 			this->Black33->Size = System::Drawing::Size(100, 88);
 			this->Black33->TabIndex = 72;
 			this->Black33->TabStop = false;
-
+			// 
 			// Black23
+			// 
 			this->Black23->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black23.BackgroundImage")));
 			this->Black23->Location = System::Drawing::Point(398, 258);
 			this->Black23->Name = L"Black23";
 			this->Black23->Size = System::Drawing::Size(100, 88);
 			this->Black23->TabIndex = 73;
 			this->Black23->TabStop = false;
-
+			// 
 			// Black13
+			// 
 			this->Black13->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black13.BackgroundImage")));
 			this->Black13->Location = System::Drawing::Point(398, 178);
 			this->Black13->Name = L"Black13";
 			this->Black13->Size = System::Drawing::Size(100, 88);
 			this->Black13->TabIndex = 74;
 			this->Black13->TabStop = false;
-
+			// 
 			// Black03
+			// 
 			this->Black03->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black03.BackgroundImage")));
 			this->Black03->Location = System::Drawing::Point(398, 103);
 			this->Black03->Name = L"Black03";
 			this->Black03->Size = System::Drawing::Size(100, 83);
 			this->Black03->TabIndex = 75;
 			this->Black03->TabStop = false;
-
+			// 
 			// Black54
+			// 
 			this->Black54->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black54.BackgroundImage")));
 			this->Black54->Location = System::Drawing::Point(491, 500);
 			this->Black54->Name = L"Black54";
 			this->Black54->Size = System::Drawing::Size(100, 88);
 			this->Black54->TabIndex = 76;
 			this->Black54->TabStop = false;
-
+			// 
 			// Black44
+			// 
 			this->Black44->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black44.BackgroundImage")));
 			this->Black44->Location = System::Drawing::Point(491, 419);
 			this->Black44->Name = L"Black44";
 			this->Black44->Size = System::Drawing::Size(100, 88);
 			this->Black44->TabIndex = 77;
 			this->Black44->TabStop = false;
-
+			// 
 			// Black34
+			// 
 			this->Black34->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black34.BackgroundImage")));
 			this->Black34->Location = System::Drawing::Point(491, 339);
 			this->Black34->Name = L"Black34";
 			this->Black34->Size = System::Drawing::Size(100, 88);
 			this->Black34->TabIndex = 78;
 			this->Black34->TabStop = false;
-
+			// 
 			// Black24
+			// 
 			this->Black24->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black24.BackgroundImage")));
 			this->Black24->Location = System::Drawing::Point(491, 258);
 			this->Black24->Name = L"Black24";
 			this->Black24->Size = System::Drawing::Size(100, 88);
 			this->Black24->TabIndex = 79;
 			this->Black24->TabStop = false;
-
+			// 
 			// Black14
+			// 
 			this->Black14->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black14.BackgroundImage")));
 			this->Black14->Location = System::Drawing::Point(491, 178);
 			this->Black14->Name = L"Black14";
 			this->Black14->Size = System::Drawing::Size(100, 88);
 			this->Black14->TabIndex = 80;
 			this->Black14->TabStop = false;
-
+			// 
 			// Black04
+			// 
 			this->Black04->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black04.BackgroundImage")));
 			this->Black04->Location = System::Drawing::Point(491, 103);
 			this->Black04->Name = L"Black04";
 			this->Black04->Size = System::Drawing::Size(100, 83);
 			this->Black04->TabIndex = 81;
 			this->Black04->TabStop = false;
-
+			// 
 			// Black55
+			// 
 			this->Black55->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black55.BackgroundImage")));
 			this->Black55->Location = System::Drawing::Point(579, 500);
 			this->Black55->Name = L"Black55";
 			this->Black55->Size = System::Drawing::Size(100, 88);
 			this->Black55->TabIndex = 82;
 			this->Black55->TabStop = false;
-
+			// 
 			// Black45
+			// 
 			this->Black45->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black45.BackgroundImage")));
 			this->Black45->Location = System::Drawing::Point(579, 419);
 			this->Black45->Name = L"Black45";
 			this->Black45->Size = System::Drawing::Size(100, 88);
 			this->Black45->TabIndex = 83;
 			this->Black45->TabStop = false;
-
+			// 
 			// Black35
+			// 
 			this->Black35->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black35.BackgroundImage")));
 			this->Black35->Location = System::Drawing::Point(579, 339);
 			this->Black35->Name = L"Black35";
 			this->Black35->Size = System::Drawing::Size(100, 88);
 			this->Black35->TabIndex = 84;
 			this->Black35->TabStop = false;
-
+			// 
 			// Black25
+			// 
 			this->Black25->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black25.BackgroundImage")));
 			this->Black25->Location = System::Drawing::Point(579, 258);
 			this->Black25->Name = L"Black25";
 			this->Black25->Size = System::Drawing::Size(100, 88);
 			this->Black25->TabIndex = 85;
 			this->Black25->TabStop = false;
-
+			// 
 			// Black15
+			// 
 			this->Black15->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black15.BackgroundImage")));
 			this->Black15->Location = System::Drawing::Point(579, 178);
 			this->Black15->Name = L"Black15";
 			this->Black15->Size = System::Drawing::Size(100, 88);
 			this->Black15->TabIndex = 86;
 			this->Black15->TabStop = false;
-
+			// 
 			// Black05
+			// 
 			this->Black05->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black05.BackgroundImage")));
 			this->Black05->Location = System::Drawing::Point(579, 103);
 			this->Black05->Name = L"Black05";
 			this->Black05->Size = System::Drawing::Size(100, 83);
 			this->Black05->TabIndex = 87;
 			this->Black05->TabStop = false;
-
+			// 
 			// Black56
+			// 
 			this->Black56->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black56.BackgroundImage")));
 			this->Black56->Location = System::Drawing::Point(665, 500);
 			this->Black56->Name = L"Black56";
 			this->Black56->Size = System::Drawing::Size(100, 88);
 			this->Black56->TabIndex = 88;
 			this->Black56->TabStop = false;
-
+			// 
 			// Black46
+			// 
 			this->Black46->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black46.BackgroundImage")));
 			this->Black46->Location = System::Drawing::Point(665, 419);
 			this->Black46->Name = L"Black46";
 			this->Black46->Size = System::Drawing::Size(100, 88);
 			this->Black46->TabIndex = 89;
 			this->Black46->TabStop = false;
-
+			// 
 			// Black36
+			// 
 			this->Black36->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black36.BackgroundImage")));
 			this->Black36->Location = System::Drawing::Point(665, 339);
 			this->Black36->Name = L"Black36";
 			this->Black36->Size = System::Drawing::Size(100, 88);
 			this->Black36->TabIndex = 90;
 			this->Black36->TabStop = false;
-
+			// 
 			// Black26
+			// 
 			this->Black26->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black26.BackgroundImage")));
 			this->Black26->Location = System::Drawing::Point(665, 258);
 			this->Black26->Name = L"Black26";
 			this->Black26->Size = System::Drawing::Size(100, 88);
 			this->Black26->TabIndex = 91;
 			this->Black26->TabStop = false;
-
+			// 
 			// Black16
+			// 
 			this->Black16->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black16.BackgroundImage")));
 			this->Black16->Location = System::Drawing::Point(665, 178);
 			this->Black16->Name = L"Black16";
 			this->Black16->Size = System::Drawing::Size(100, 88);
 			this->Black16->TabIndex = 92;
 			this->Black16->TabStop = false;
-
+			// 
 			// Black06
+			// 
 			this->Black06->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"Black06.BackgroundImage")));
 			this->Black06->Location = System::Drawing::Point(665, 103);
 			this->Black06->Name = L"Black06";
 			this->Black06->Size = System::Drawing::Size(100, 83);
 			this->Black06->TabIndex = 93;
 			this->Black06->TabStop = false;
-
+			// 
 			// clear
+			// 
 			this->clear->Location = System::Drawing::Point(793, 22);
 			this->clear->Name = L"clear";
 			this->clear->Size = System::Drawing::Size(93, 34);
@@ -1084,11 +1177,15 @@ namespace Connect4 {
 			this->clear->Text = L"Clear Game";
 			this->clear->UseVisualStyleBackColor = true;
 			this->clear->Click += gcnew System::EventHandler(this, &MyForm::clear_Click);
-
+			// 
 			// MyForm
+			// 
 			this->AccessibleName = L"col7";
 			this->AutoScaleDimensions = System::Drawing::SizeF(6, 13);
 			this->AutoScaleMode = System::Windows::Forms::AutoScaleMode::Font;
+			this->BackColor = System::Drawing::Color::Silver;
+			this->BackgroundImage = (cli::safe_cast<System::Drawing::Image^  >(resources->GetObject(L"$this.BackgroundImage")));
+			this->BackgroundImageLayout = System::Windows::Forms::ImageLayout::Stretch;
 			this->ClientSize = System::Drawing::Size(898, 623);
 			this->Controls->Add(this->clear);
 			this->Controls->Add(this->Black06);
