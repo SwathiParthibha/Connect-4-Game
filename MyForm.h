@@ -1,12 +1,11 @@
+#include <iostream>
+using namespace std;
+
 #pragma once
-bool turn = true; //true means red and false means black
-	int col1[6];
-	int col2[6];
-	int col3[6];
-	int col4[6];
-	int col5[6];
-	int col6[6];
-	int col7[6];
+
+	bool turn = true; //true means red and false means black
+	int board[12][13];
+	int row, col;
 
 namespace Connect4 {
 	using namespace System;
@@ -21,23 +20,18 @@ namespace Connect4 {
 	public:
 		MyForm(void)
 		{
-			for(int i = 0; i < 6; i++){
-				col1[i] = 0;
-				col2[i] = 0;
-				col3[i] = 0;
-				col4[i] = 0;
-				col5[i] = 0;
-				col6[i] = 0;
-				col7[i] = 0;
+			for(int i = 0; i < 12; i++){
+				for(int j=0; j < 13; j++){
+					board[i][j] = 0;
+				}
 			}
 				InitializeComponent();
 				this->boardBox->BringToFront();
 		}
 
+
+
 	protected:
-		/// <summary>
-		/// Clean up any resources being used.
-		/// </summary>
 		~MyForm()
 		{
 			if (components)
@@ -46,7 +40,6 @@ namespace Connect4 {
 			}
 		}
 	
-
 	protected: 
 		private: System::Windows::Forms::PictureBox^  boardBox;
 		private: System::Windows::Forms::RichTextBox^  richTextBox1;
@@ -1371,64 +1364,90 @@ namespace Connect4 {
 			this->ResumeLayout(false);
 
 		}
+
 #pragma endregion
 
 private: System::Void button1_Click(System::Object^  sender, System::EventArgs^  e) {
 			 if(turn == true){
-				 if(col1[5] == 0){
+				 if(board[8][3] == 0){
 					this->Red50->BringToFront();
-					col1[5] = 1;
+					board[8][3] = 1;
+					row = 8;
+					col = 3;
 				 }
-				 else if(col1[4] == 0){
+				 else if(board[7][3] == 0){
 					 this->Red40->BringToFront();
-					 col1[4] = 1;
+					 board[7][3] = 1;
+					 row = 7;
+					col = 3;
 				 }
-				 else if(col1[3] == 0){
+				 else if(board[6][3] == 0){
 					 this->Red30->BringToFront();
-					 col1[3] = 1;
+					 board[6][3] = 1;
+					 row = 6;
+					col = 3;
 				 }
-				 else if(col1[2] == 0){
+				 else if(board[5][3] == 0){
 					 this->Red20->BringToFront();
-					 col1[2] = 1;
+					 board[5][3] = 1;
+					 row = 5;
+					col = 3;
 				 }
-				 else if(col1[1] == 0){
+				 else if(board[4][3] == 0){
 					 this->Red10->BringToFront();
-					 col1[1] = 1;
+					 board[4][3] = 1;
+					 row = 4;
+					col = 3;
 				 }
-				 else if(col1[0] == 0){
+				 else if(board[3][3] == 0){
 					 this->Red00->BringToFront();
-					 col1[0] = 1;
+					 board[3][3] = 1;
+					 row = 3;
+					col = 3;
 				 }
 			 
 			 }
 			 else{
-				 if(col1[5] == 0){
+
+				if(board[8][3] == 0){
 					this->Black50->BringToFront();
-					col1[5] = 2;
+					board[8][3] = 2;
+					row = 8;
+					col = 3;
 				 }
-				 else if(col1[4] == 0){
+				 else if(board[7][3] == 0){
 					 this->Black40->BringToFront();
-					 col1[4] = 2;
+					 board[7][3] = 2;
+					 row = 7;
+					col = 3;
 				 }
-				 else if(col1[3] == 0){
+				 else if(board[6][3] == 0){
 					 this->Black30->BringToFront();
-					 col1[3] = 2;
+					 board[6][3] = 2;
+					 row = 6;
+					col = 3;
 				 }
-				 else if(col1[2] == 0){
+				 else if(board[5][3] == 0){
 					 this->Black20->BringToFront();
-					 col1[2] = 2;
+					 board[5][3] = 2;
+					 row = 5;
+					col = 3;
 				 }
-				 else if(col1[1] == 0){
+				 else if(board[4][3] == 0){
 					 this->Black10->BringToFront();
-					 col1[1] = 2;
+					 board[4][3] = 2;
+					 row = 4;
+					col = 3;
 				 }
-				 else if(col1[0] == 0){
+				 else if(board[3][3] == 0){
 					 this->Black00->BringToFront();
-					 col1[0] = 2;
+					 board[3][3] = 2;
+					 row = 3;
+					col = 3;
 				 }
 
 			 }
-
+			  
 			  turn = !turn;
 			 if(turn == true){
 				 this->richTextBox1->Text = L"Red's Turn";
@@ -1436,64 +1455,107 @@ private: System::Void button1_Click(System::Object^  sender, System::EventArgs^ 
 			 else{
 				this->richTextBox1->Text = L"Black's Turn"; 
 			 }
-		 }
+
+
+			 /*
+			 for(int i = -3; i < 1; i++) {
+					for(int j = -3; j < 1; j++) {
+						if((board[row][col]== board[row+i][col+j]) && (board[row+i][col+j] ==board[row+i+1][col+j+1]) && (board[row+i+1][col+j+1]==board[row+i+2][col+j+2]) && (board[row+i+2][col+j+2]==board[row+i+3][col+3])){
+							this->richTextBox1->Text = L"Won";
+							cout << "Won" << endl;
+						}
+						else{
+							cout << "Not Won" << endl;
+						}
+			}	
+		}
+		*/
+}
+
+		 
 
 private: System::Void button2_Click(System::Object^  sender, System::EventArgs^  e) {
 			 if(turn == true){
-				  if(col2[5] == 0){
-					this->Red51->BringToFront();
-					col2[5] = 1;
+				 if(board[8][4] == 0){
+				 this->Red51->BringToFront();
+					board[8][4] = 1;
+					row = 8;
+					col = 4;
 				 }
-				 else if(col2[4] == 0){
+				 else if(board[7][4] == 0){
 					 this->Red41->BringToFront();
-					 col2[4] = 1;
+					 board[7][4] = 1;
+					 row = 7;
+					col = 4;
 				 }
-				 else if(col2[3] == 0){
+				 else if(board[6][4] == 0){
 					 this->Red31->BringToFront();
-					 col2[3] = 1;
+					 board[6][4] = 1;
+					 row = 6;
+					col = 4;
 				 }
-				 else if(col2[2] == 0){
+				 else if(board[5][4] == 0){
 					 this->Red21->BringToFront();
-					 col2[2] = 1;
+					 board[5][4] = 1;
+					 row = 5;
+					col = 4;
 				 }
-				 else if(col2[1] == 0){
+				 else if(board[4][4] == 0){
 					 this->Red11->BringToFront();
-					 col2[1] = 1;
+					 board[4][4] = 1;
+					 row = 4;
+					col = 4;
 				 }
-				 else if(col2[0] == 0){
+				 else if(board[3][4] == 0){
 					 this->Red01->BringToFront();
-					 col2[0] = 1;
+					 board[3][4] = 1;
+					 row = 3;
+					col = 4;
 				 }
+			 
 			 }
 			 else{
-				 if(col2[5] == 0){
+
+				if(board[8][4] == 0){
 					this->Black51->BringToFront();
-					col2[5] = 2;
+					board[8][4] = 2;
+					row = 8;
+					col = 4;
 				 }
-				 else if(col2[4] == 0){
+				 else if(board[7][4] == 0){
 					 this->Black41->BringToFront();
-					 col2[4] = 2;
+					 board[7][4] = 2;
+					 row = 7;
+					col = 4;
 				 }
-				 else if(col2[3] == 0){
+				 else if(board[6][4] == 0){
 					 this->Black31->BringToFront();
-					 col2[3] = 2;
+					 board[6][4] = 2;
+					 row = 6;
+					col = 4;
 				 }
-				 else if(col2[2] == 0){
+				 else if(board[5][4] == 0){
 					 this->Black21->BringToFront();
-					 col2[2] = 2;
+					 board[5][4] = 2;
+					 row = 5;
+					col = 4;
 				 }
-				 else if(col2[1] == 0){
+				 else if(board[4][4] == 0){
 					 this->Black11->BringToFront();
-					 col2[1] = 2;
+					 board[4][4] = 2;
+					 row = 4;
+					col = 4;
 				 }
-				 else if(col2[0] == 0){
+				 else if(board[3][4] == 0){
 					 this->Black01->BringToFront();
-					 col2[0] = 2;
+					 board[3][4] = 2;
+					 row = 3;
+					col = 4;
 				 }
 
 			 }
-
-			  turn = !turn;
+			 
+		  turn = !turn;
 			 if(turn == true){
 				 this->richTextBox1->Text = L"Red's Turn";
 			 }
@@ -1503,57 +1565,85 @@ private: System::Void button2_Click(System::Object^  sender, System::EventArgs^ 
 		 }
 
 private: System::Void button3_Click(System::Object^  sender, System::EventArgs^  e) {
-			 if(turn == true){
-				  if(col3[5] == 0){
+			if(turn == true){
+				 if(board[8][5] == 0){
 					this->Red52->BringToFront();
-					col3[5] = 1;
+					board[8][5] = 1;
+					row = 8;
+					col = 5;
 				 }
-				 else if(col3[4] == 0){
+				 else if(board[7][5] == 0){
 					 this->Red42->BringToFront();
-					 col3[4] = 1;
+					 board[7][5] = 1;
+					 row = 7;
+					col = 5;
 				 }
-				 else if(col3[3] == 0){
+				 else if(board[6][5] == 0){
 					 this->Red32->BringToFront();
-					 col3[3] = 1;
+					 board[6][5] = 1;
+					 row = 6;
+					col = 5;
 				 }
-				 else if(col3[2] == 0){
+				 else if(board[5][5] == 0){
 					 this->Red22->BringToFront();
-					 col3[2] = 1;
+					 board[5][5] = 1;
+					 row = 5;
+					col = 5;
 				 }
-				 else if(col3[1] == 0){
+				 else if(board[4][5] == 0){
 					 this->Red12->BringToFront();
-					 col3[1] = 1;
+					 board[4][5] = 1;
+					 row = 4;
+					col = 5;
 				 }
-				 else if(col3[0] == 0){
+				 else if(board[3][5] == 0){
 					 this->Red02->BringToFront();
-					 col3[0] = 1;
+					 board[3][5] = 1;
+					 row = 3;
+					col = 5;
 				 }
+			 
 			 }
 			 else{
-				 if(col3[5] == 0){
+
+				if(board[8][5] == 0){
 					this->Black52->BringToFront();
-					col3[5] = 2;
+					board[8][5] = 2;
+					row = 8;
+					col = 5;
+
 				 }
-				 else if(col3[4] == 0){
+				 else if(board[7][5] == 0){
 					 this->Black42->BringToFront();
-					 col3[4] = 2;
+					 board[7][5] = 2;
+					 row = 7;
+					col = 5;
 				 }
-				 else if(col3[3] == 0){
+				 else if(board[6][5] == 0){
 					 this->Black32->BringToFront();
-					 col3[3] = 2;
+					 board[6][5] = 2;
+					 row = 6;
+					col = 5;
 				 }
-				 else if(col3[2] == 0){
+				 else if(board[5][5] == 0){
 					 this->Black22->BringToFront();
-					 col3[2] = 2;
+					 board[5][5] = 2;
+					 row = 5;
+					col = 5;
 				 }
-				 else if(col3[1] == 0){
+				 else if(board[4][5] == 0){
 					 this->Black12->BringToFront();
-					 col3[1] = 2;
+					 board[4][5] = 2;
+					 row = 4;
+					col = 5;
 				 }
-				 else if(col3[0] == 0){
+				 else if(board[3][5] == 0){
 					 this->Black02->BringToFront();
-					 col3[0] = 2;
+					 board[3][5] = 2;
+					 row = 3;
+					col = 5;
 				 }
+
 			 }
 
 			  turn = !turn;
@@ -1567,56 +1657,83 @@ private: System::Void button3_Click(System::Object^  sender, System::EventArgs^ 
 
 private: System::Void button4_Click(System::Object^  sender, System::EventArgs^  e) {
 			 if(turn == true){
-				 if(col4[5] == 0){
+				 if(board[8][6] == 0){
 					this->Red53->BringToFront();
-					col4[5] = 1;
+					board[8][6] = 1;
+					row = 8;
+					col = 6;
 				 }
-				 else if(col4[4] == 0){
+				 else if(board[7][6] == 0){
 					 this->Red43->BringToFront();
-					 col4[4] = 1;
+					 board[7][6] = 1;
+					 row = 7;
+					col = 6;
 				 }
-				 else if(col4[3] == 0){
+				 else if(board[6][6] == 0){
 					 this->Red33->BringToFront();
-					 col4[3] = 1;
+					 board[6][6] = 1;
+					 row = 6;
+					col = 6;
 				 }
-				 else if(col4[2] == 0){
+				 else if(board[5][6] == 0){
 					 this->Red23->BringToFront();
-					 col4[2] = 1;
+					 board[5][6] = 1;
+					 row = 5;
+					col = 6;
 				 }
-				 else if(col4[1] == 0){
+				 else if(board[4][6] == 0){
 					 this->Red13->BringToFront();
-					 col4[1] = 1;
+					 board[4][6] = 1;
+					 row = 4;
+					col = 6;
 				 }
-				 else if(col4[0] == 0){
+				 else if(board[3][6] == 0){
 					 this->Red03->BringToFront();
-					 col4[0] = 1;
+					 board[3][6] = 1;
+					 row = 3;
+					col = 6;
 				 }
+			 
 			 }
 			 else{
-				 if(col4[5] == 0){
+
+				if(board[8][6] == 0){
 					this->Black53->BringToFront();
-					col4[5] = 2;
+					board[8][6] = 2;
+					row = 8;
+					col = 6;
 				 }
-				 else if(col4[4] == 0){
+				 else if(board[7][6] == 0){
 					 this->Black43->BringToFront();
-					 col4[4] = 2;
+					 board[7][6] = 2;
+					 row = 7;
+					col = 6;
 				 }
-				 else if(col4[3] == 0){
+				 else if(board[6][6] == 0){
 					 this->Black33->BringToFront();
-					 col4[3] = 2;
+					 board[6][6] = 2;
+					 row = 6;
+					col = 6;
 				 }
-				 else if(col4[2] == 0){
+				 else if(board[5][6] == 0){
 					 this->Black23->BringToFront();
-					 col4[2] = 2;
+					 board[5][6] = 2;
+					 row = 5;
+					col = 6;
 				 }
-				 else if(col4[1] == 0){
+				 else if(board[4][6] == 0){
 					 this->Black13->BringToFront();
-					 col4[1] = 2;
+					 board[4][6] = 2;
+					 row = 4;
+					col = 6;
 				 }
-				 else if(col4[0] == 0){
+				 else if(board[3][6] == 0){
 					 this->Black03->BringToFront();
-					 col4[0] = 2;
+					 board[3][6] = 2;
+					 row = 3;
+					col = 6;
 				 }
+
 			 }
 
 			  turn = !turn;
@@ -1630,56 +1747,83 @@ private: System::Void button4_Click(System::Object^  sender, System::EventArgs^ 
 
 private: System::Void button5_Click(System::Object^  sender, System::EventArgs^  e) {
 			 if(turn == true){
-				 if(col5[5] == 0){
+				 if(board[8][7] == 0){
 					this->Red54->BringToFront();
-					col5[5] = 1;
+					board[8][7] = 1;
+					row = 8;
+					col = 7;
 				 }
-				 else if(col5[4] == 0){
+				 else if(board[7][7] == 0){
 					 this->Red44->BringToFront();
-					 col5[4] = 1;
+					 board[7][7] = 1;
+					 row = 7;
+					col = 7;
 				 }
-				 else if(col5[3] == 0){
+				 else if(board[6][7] == 0){
 					 this->Red34->BringToFront();
-					 col5[3] = 1;
+					 board[6][7] = 1;
+					 row = 6;
+					col = 7;
 				 }
-				 else if(col5[2] == 0){
+				 else if(board[5][7] == 0){
 					 this->Red24->BringToFront();
-					 col5[2] = 1;
+					 board[5][7] = 1;
+					 row = 5;
+					col = 7;
 				 }
-				 else if(col5[1] == 0){
+				 else if(board[4][7] == 0){
 					 this->Red14->BringToFront();
-					 col5[1] = 1;
+					 board[4][7] = 1;
+					 row = 4;
+					col = 7;
 				 }
-				 else if(col5[0] == 0){
+				 else if(board[3][7] == 0){
 					 this->Red04->BringToFront();
-					 col5[0] = 1;
+					 board[3][7] = 1;
+					 row = 3;
+					col = 7;
 				 }
+			 
 			 }
 			 else{
-				 if(col5[5] == 0){
+
+				if(board[8][7] == 0){
 					this->Black54->BringToFront();
-					col5[5] = 2;
+					board[8][7] = 2;
+					row = 8;
+					col = 7;
 				 }
-				 else if(col5[4] == 0){
+				 else if(board[7][7] == 0){
 					 this->Black44->BringToFront();
-					 col5[4] = 2;
+					 board[7][7] = 2;
+					 row = 7;
+					col = 7;
 				 }
-				 else if(col5[3] == 0){
+				 else if(board[6][7] == 0){
 					 this->Black34->BringToFront();
-					 col5[3] = 2;
+					 board[6][7] = 2;
+					 row = 6;
+					col = 7;
 				 }
-				 else if(col5[2] == 0){
+				 else if(board[5][7] == 0){
 					 this->Black24->BringToFront();
-					 col5[2] = 2;
+					 board[5][7] = 2;
+					 row = 5;
+					col = 7;
 				 }
-				 else if(col5[1] == 0){
+				 else if(board[4][7] == 0){
 					 this->Black14->BringToFront();
-					 col5[1] = 2;
+					 board[4][7] = 2;
+					 row = 4;
+					col = 7;
 				 }
-				 else if(col5[0] == 0){
+				 else if(board[3][7] == 0){
 					 this->Black04->BringToFront();
-					 col5[0] = 2;
+					 board[3][7] = 2;
+					 row = 3;
+					col = 7;
 				 }
+
 			 }
 
 			  turn = !turn;
@@ -1692,57 +1836,84 @@ private: System::Void button5_Click(System::Object^  sender, System::EventArgs^ 
 		 }
 
 private: System::Void button6_Click(System::Object^  sender, System::EventArgs^  e) {
-			 if(turn == true){
-				 if(col6[5] == 0){
+			if(turn == true){
+				 if(board[8][8] == 0){
 					this->Red55->BringToFront();
-					col6[5] = 1;
+					board[8][8] = 1;
+					row = 8;
+					col = 8;
 				 }
-				 else if(col6[4] == 0){
+				 else if(board[7][8] == 0){
 					 this->Red45->BringToFront();
-					 col6[4] = 1;
+					 board[7][8] = 1;
+					 row = 7;
+					col = 8;
 				 }
-				 else if(col6[3] == 0){
+				 else if(board[6][8] == 0){
 					 this->Red35->BringToFront();
-					 col6[3] = 1;
+					 board[6][8] = 1;
+					 row = 6;
+					col = 8;
 				 }
-				 else if(col6[2] == 0){
+				 else if(board[5][8] == 0){
 					 this->Red25->BringToFront();
-					 col6[2] = 1;
+					 board[5][8] = 1;
+					 row = 5;
+					col = 8;
 				 }
-				 else if(col6[1] == 0){
+				 else if(board[4][8] == 0){
 					 this->Red15->BringToFront();
-					 col6[1] = 1;
+					 board[4][8] = 1;
+					 row = 4;
+					col = 8;
 				 }
-				 else if(col6[0] == 0){
+				 else if(board[3][8] == 0){
 					 this->Red05->BringToFront();
-					 col6[0] = 1;
+					 board[3][8] = 1;
+					 row = 3;
+					col = 8;
 				 }
+			 
 			 }
 			 else{
-				 if(col6[5] == 0){
+
+				if(board[8][8] == 0){
 					this->Black55->BringToFront();
-					col6[5] = 2;
+					board[8][8] = 2;
+					row = 8;
+					col = 8;
 				 }
-				 else if(col6[4] == 0){
+				 else if(board[7][8] == 0){
 					 this->Black45->BringToFront();
-					 col6[4] = 2;
+					 board[7][8] = 2;
+					 row = 7;
+					col = 8;
 				 }
-				 else if(col6[3] == 0){
+				 else if(board[6][8] == 0){
 					 this->Black35->BringToFront();
-					 col6[3] = 2;
+					 board[6][8] = 2;
+					 row = 6;
+					col = 8;
 				 }
-				 else if(col6[2] == 0){
+				 else if(board[5][8] == 0){
 					 this->Black25->BringToFront();
-					 col6[2] = 2;
+					 board[5][8] = 2;
+					 row = 5;
+					col = 8;
 				 }
-				 else if(col6[1] == 0){
+				 else if(board[4][8] == 0){
 					 this->Black15->BringToFront();
-					 col6[1] = 2;
+					 board[4][8] = 2;
+					 row = 4;
+					col = 8;
 				 }
-				 else if(col6[0] == 0){
+				 else if(board[3][8] == 0){
 					 this->Black05->BringToFront();
-					 col6[0] = 2;
+					 board[3][8] = 2;
+					 row = 3;
+					col = 8;
 				 }
+
 			 }
 
 			  turn = !turn;
@@ -1756,56 +1927,83 @@ private: System::Void button6_Click(System::Object^  sender, System::EventArgs^ 
 
 private: System::Void button7_Click(System::Object^  sender, System::EventArgs^  e) {
 			 if(turn == true){
-				 if(col7[5] == 0){
+				 if(board[8][9] == 0){
 					this->Red56->BringToFront();
-					col7[5] = 1;
+					board[8][9] = 1;
+					row = 8;
+					col = 9;
 				 }
-				 else if(col7[4] == 0){
+				 else if(board[7][9] == 0){
 					 this->Red46->BringToFront();
-					 col7[4] = 1;
+					 board[7][9] = 1;
+					 row = 7;
+					col = 9;
 				 }
-				 else if(col7[3] == 0){
+				 else if(board[6][9] == 0){
 					 this->Red36->BringToFront();
-					 col7[3] = 1;
+					 board[6][9] = 1;
+					 row = 6;
+					col = 9;
 				 }
-				 else if(col7[2] == 0){
+				 else if(board[5][9] == 0){
 					 this->Red26->BringToFront();
-					 col7[2] = 1;
+					 board[5][9] = 1;
+					 row = 5;
+					col = 9;
 				 }
-				 else if(col7[1] == 0){
+				 else if(board[4][9] == 0){
 					 this->Red16->BringToFront();
-					 col7[1] = 1;
+					 board[4][9] = 1;
+					 row = 4;
+					col = 9;
 				 }
-				 else if(col7[0] == 0){
+				 else if(board[3][9] == 0){
 					 this->Red06->BringToFront();
-					 col7[0]= 1;
+					 board[3][9] = 1;
+					 row = 3;
+					col = 9;
 				 }
+			 
 			 }
 			 else{
-				  if(col7[5] == 0){
+
+				if(board[8][9] == 0){
 					this->Black56->BringToFront();
-					col7[5] = 2;
+					board[8][9] = 2;
+					row = 8;
+					col = 9;
 				 }
-				 else if(col7[4] == 0){
+				 else if(board[7][9] == 0){
 					 this->Black46->BringToFront();
-					 col7[4] = 2;
+					 board[7][9] = 2;
+					 row = 7;
+					col = 9;
 				 }
-				 else if(col7[3] == 0){
+				 else if(board[6][9] == 0){
 					 this->Black36->BringToFront();
-					 col7[3] = 2;
+					 board[6][9] = 2;
+					 row = 6;
+					col = 9;
 				 }
-				 else if(col7[2] == 0){
+				 else if(board[5][9] == 0){
 					 this->Black26->BringToFront();
-					 col7[2] = 2;
+					 board[5][9] = 2;
+					 row = 5;
+					col = 9;
 				 }
-				 else if(col7[1] == 0){
+				 else if(board[4][9] == 0){
 					 this->Black16->BringToFront();
-					 col7[1] = 2;
+					 board[4][9] = 2;
+					 row = 4;
+					col = 9;
 				 }
-				 else if(col7[0] == 0){
+				 else if(board[3][9] == 0){
 					 this->Black06->BringToFront();
-					 col7[0] = 2;
+					 board[3][9] = 2;
+					 row = 3;
+					col = 9;
 				 }
+
 			 }
 
 			  turn = !turn;
@@ -1826,16 +2024,15 @@ private: System::Void clear_Click(System::Object^  sender, System::EventArgs^  e
 				this->richTextBox1->Text = L"Black's Turn"; 
 			 }
 
-			 for(int i = 0; i < 6; i++){
-				col1[i] = 0;
-				col2[i] = 0;
-				col3[i] = 0;
-				col4[i] = 0;
-				col5[i] = 0;
-				col6[i] = 0;
-				col7[i] = 0;
+			 for(int i = 0; i < 12; i++){
+				for(int j=0; j < 13; j++){
+					board[i][j] = 0;
+				}
 			}
 			 this->boardBox->BringToFront();
 		 }
+
 };
+
+
 }
