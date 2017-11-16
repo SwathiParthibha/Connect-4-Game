@@ -1,0 +1,8 @@
+﻿  MyForm.cpp
+c:\users\swathi\documents\visual studio 2017\projects\connect4 - copy\connect4\MyForm.h(2049): warning C4101: 'whoWon': unreferenced local variable
+c:\users\swathi\documents\visual studio 2017\projects\connect4 - copy\connect4\MyForm.h(2146): warning C4101: 'whoWon': unreferenced local variable
+c:\users\swathi\documents\visual studio 2017\projects\connect4 - copy\connect4\MyForm.h(2204): warning C4101: 'whoWon': unreferenced local variable
+MyForm.cpp(5): warning C4829: Possibly incorrect parameters to function main. Consider 'int main(Platform::Array<Platform::String^>^ argv)'
+c:\users\swathi\documents\visual studio 2017\projects\connect4 - copy\connect4\myform.h(2140): warning C4715: 'Connect4::MyForm::vertical': not all control paths return a value
+c:\users\swathi\documents\visual studio 2017\projects\connect4 - copy\connect4\myform.h(2201): warning C4715: 'Connect4::MyForm::horizontal': not all control paths return a value
+  Connect4.vcxproj -> C:\Users\Swathi\Documents\Visual Studio 2017\Projects\Connect4 - Copy\Debug\Connect4.exe
